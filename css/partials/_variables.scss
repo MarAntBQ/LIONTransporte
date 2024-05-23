@@ -1,0 +1,147 @@
+// Colors
+// Describe your Web Site Main Color here: "Marbust Brown"
+$maincolor: black;
+// Describe your Second Color here: "White"
+$color2: white;
+// Describe your Thrid Color here: "Almost Black"
+$color3: black;
+
+// Header Colors
+$header-background: white;
+$header-nav-ul-li-a-color: black;
+// Header Responsive Menu
+$menu-responsive-background: white;
+$menu-responsive-a-border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+$menu-btn-color: black;
+$menu-btn-hover-color: #5b5f5d;
+
+
+// Shadows
+$shadow: drop-shadow(8px 8px 10px #808080);
+@mixin shadow {
+    filter: $shadow;
+}
+
+// Footer Colors
+$footer-background: white;
+$footer-p-color: black;
+$footer-headings-color: black;
+$footer-a-color: #001798;
+$footer-a-hover-color: #8799ff;
+
+
+// Measures for Margin in the document for example general margin, general padding, etc
+$generalmargin: 0;
+$generalpadding: 0;
+
+// Media Queries
+$break-medium: 1000px;
+$break-small: 550px;
+
+// ----------------------------------------------->-
+
+// Header Variables
+// If you want to make it fixed enable the next options
+$header-position: fixed;
+$header-top-left: 0;
+$header-index: 2;
+
+$header-height: 50px;
+$header-width: 100%;
+$header-padding: 0 15px;
+// In logo
+$header-logo-height: $header-height;
+$header-logo-line-height: 50px;
+$header-logo-font-size: 24px;
+$header-logo-float: left;
+$header-logo-font-weight: bold;
+// In Logo Img
+$header-logo-img-width: 50px;
+$header-logo-img-margin-top: 5px;
+$header-logo-img-transition: all 0.5s;
+$header-logo-img-opacity: 0.7;
+$header-logo-img-transform: scale(1.2);
+// In NavBar
+$header-nav-float: right;
+// In NavBar ul
+$header-nav-ul-margin: 0;
+$header-nav-ul-padding: 0;
+$header-nav-ul-display: flex;
+// In NavBar ul li
+$header-nav-ul-li-list-style: none;
+$header-nav-ul-li-list-position: relative;
+// In NavBar ul li a
+$header-nav-ul-li-a-height: 50px;
+$header-nav-ul-li-a-line-height: 50px;
+$header-nav-ul-li-a-padding: 0 22px;
+$header-nav-ul-li-a-text-decoration: none;
+$header-nav-ul-li-a-display: block;
+$header-nav-ul-li-a-transition: all 0.7s;
+// Menu Btn
+$menu-btn-float: right;
+$menu-btn-line-height: 50px;
+$menu-btn-font-size: 24px;
+$menu-btn-cursor: pointer;
+$menu-btn-display: none;
+$menu-btn-transition: all 0.7s;
+
+// -----------------------------------------------<-
+
+
+// ----------------------------------------------->-
+// Main Variables
+$main-magin-top: $header-height;
+$main-color: black;
+$main-padding: 40px 10px;
+$main-headings-color: $maincolor;
+$main-a-color: $maincolor;
+$main-a-text-decoration: none;
+$main-a-transition: all 0.5s;
+$main-a-hover-color: $color3;
+$main-b-color: $maincolor;
+
+// General Sections
+$general-sections-padding: 40px 10px;
+
+
+// -----------------------------------------------<-
+
+
+// ----------------------------------------------->-
+// Buttons Variables
+$btn-display: block;
+$btn-background: $color3;
+$btn-color: $color2;
+$btn-padding: 10px;
+$btn-width: 150px;
+$btn-text-align: center;
+$btn-transition: all 1s;
+// Buttons Hover
+$btn-hover-color: $color3;
+$btn-hover-background: $color2;
+// Buttons Positions Setups
+$btn-left-margin: 15px auto 15px 0px;
+$btn-center-margin: 15px auto;
+$btn-right-margin: 15px 0px 15px auto;
+// -----------------------------------------------<-
+
+// ----------------------------------------------->-
+// Footer Variables
+$footer-padding: 30px 10px;
+$footer-line-height: 1.5em;
+// Footer a
+$footer-a-text-decoration: none;
+$footer-a-transition: all 0.4s;
+// Footer a hover effects
+$footer-a-hover-filter: drop-shadow(8px 8px 10px #808080);
+// Footer a i
+$footer-a-i-transition: all 1s;
+// Footer a i hover
+$footer-a-i-hover-transform: rotate(360deg) scale(1.5);
+$footer-a-i-hover-color: $footer-a-hover-color;
+$footer-a-i-hover-filter: $footer-a-hover-filter;
+$footer-a-i-hover-font-size: 1.02em;
+// Footer p
+$footer-p-margin-top: 15px;
+// Footer h2
+$footer-h2-line-height: 1.1em;

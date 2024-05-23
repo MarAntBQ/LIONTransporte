@@ -1,0 +1,25 @@
+/* Marbust Technology Company 2.0.1 CSS */
+/* 2019 - Let's Do it Different with MARBUST.COM */
+// Here we'll make it simple in order to make better our code skills and powerful work
+// 0.- It's important to setup all the Varibles for the document, for example colors, widths, paddings, etc
+@import 'partials/variables';
+//1.- Main Layout Decisions
+@import 'partials/mainstyle';
+//2.- FONTS you'll need to setup the fonts you'll want to use so open the next partial
+@import 'partials/fonts';
+//3.- Let's Setup the Header of your CSS
+@import 'partials/header';
+//4.- Let's Setup the Main of your CSS
+@import 'partials/main';
+//5.- You like personalizated buttons in Links
+@import 'partials/buttons';
+//6.- Let's Setup the Footer of your CSS
+@import 'partials/footer';
+//7.- Let's Setup the Hovers Effects of your CSS
+@import 'partials/hovers';
+//8.- Let's Setup the other pages of your web site, or if you have more create sub folders
+@import 'partials/pages';
+//9.- Let's Setup the Pricing packs section, it's funny
+@import 'partials/pricing';
+//10.- Let's Setup the Slider
+@import 'partials/slider';

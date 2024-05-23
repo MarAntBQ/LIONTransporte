@@ -1,0 +1,29 @@
+/* Buttons */
+@mixin btn-setups {
+    display: $btn-display;
+    background: $btn-background;
+    color: $btn-color;
+    padding: $btn-padding;
+    width: $btn-width;
+    text-align: $btn-text-align;
+    transition: $btn-transition;
+    max-width: 100%;
+    &:hover {
+        color: $btn-hover-color;
+        background: $btn-hover-background;
+        filter: $shadow;
+    }
+}
+.btn-left {
+    margin: $btn-left-margin;   
+    @include btn-setups; 
+}
+.btn-center {
+    margin: $btn-center-margin;   
+    @include btn-setups; 
+}
+
+.btn-right {
+    margin: $btn-right-margin;   
+    @include btn-setups; 
+}

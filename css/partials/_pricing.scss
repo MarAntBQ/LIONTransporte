@@ -1,0 +1,60 @@
+// Now it's time to create Pricing packs for example when you offer more services or packs and you want to show something like a table, this is an idea explained to a container, we don't have general for all, only add the class with the format of pricing, and let the magic come to life, remember don't cut the html codes
+/* Pricing Packs */
+.pricing {
+    text-align: center;
+    color: $color2;
+
+    h1 {
+        background: $color3;
+        color: $color2;
+        padding: 5px;
+    }
+
+    h2 {
+        background: $color2;
+        color: $maincolor;
+        padding: 10px;
+        font-size: 50px;
+        border-left: 2px solid $color3;
+        border-right: 2px solid $color3;
+    }
+
+    .pricing-title {
+        background: #626262;
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    .pricing-rows {
+        p {
+            padding: 10px;
+            transition: all 1s;
+            &:nth-child(odd) {
+                background: #808080;
+            }
+            &:nth-child(even) {
+                background: #b1b1b1;
+            }
+            &:hover {
+                background: $color3;
+            }
+        }
+    }
+    a {
+        background: $color3;
+        color: $color2;
+        display: block;
+        font-size: 30px;
+        padding: 10px;
+        transition: all 1s;
+        &:hover {
+            background: $maincolor;
+            transform: scale(1.02);
+        }
+    }
+
+    &:hover {
+        @include shadow;
+        transform: scale(1.02);
+    }
+}

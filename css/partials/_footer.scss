@@ -1,0 +1,75 @@
+/* Footer */
+//In this Version of Marbust CSS 2.0 We use a Footer with 2 colums, so now it's here the setup
+footer {
+    padding: $footer-padding;
+    background: $footer-background;
+    line-height: $footer-line-height;
+    border-top: 2px solid rgba(0, 0, 0, 0.62);
+
+    a {
+        text-decoration: $footer-a-text-decoration;
+        color: $footer-a-color;
+        transition: $footer-a-transition;
+
+        &:hover {
+            color: $footer-a-hover-color;
+            filter: $footer-a-hover-filter;
+        }
+
+        i {
+            transition: $footer-a-i-transition;
+
+            &:hover {
+                transform: $footer-a-i-hover-transform;
+                color: $footer-a-i-hover-color;
+                filter: $footer-a-i-hover-filter;
+                font-size: $footer-a-i-hover-font-size;
+            }
+        }
+    }
+
+    p {
+        color: $footer-p-color;
+        margin-top: $footer-p-margin-top;
+    }
+
+    h2 {
+        color: $footer-headings-color;
+        line-height: $footer-h2-line-height;
+    }
+}
+
+// The next code is really important for responsiveness so don't change but if you want you can do it in html for example which is left, or right, in that way you will have according to your dessires
+/* Footer Flex */
+.footerflex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    div {
+        margin: 10px;
+    }
+
+    .footerboxl {
+        width: 65%;
+
+        ul {
+            margin-top: 15px;
+            list-style: none;
+            padding-left: 0px;
+        }
+    }
+
+    .footerboxr {
+        width: 28%;
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .footerflex .footerboxl, .footerflex .footerboxr {
+        width: 98%;
+    }
+}

@@ -1,0 +1,38 @@
+/* Main */
+main {
+    // If your navbar is fixed use the next code to make the margin top, if it's not, ingnore this lines
+    margin-top: $main-magin-top;
+    color: $main-color;
+
+    //padding: $main-padding;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $main-headings-color;
+    }
+
+    b {
+        color: $main-b-color;
+    }
+}
+
+// Here you can change your dessire links setup
+/* Links Setup */
+
+a {
+    color: $main-a-color;
+    text-decoration: $main-a-text-decoration;
+    transition: $main-a-transition;
+
+    &:hover {
+        color: $main-a-hover-color;
+    }
+}
+
+
+.general-sections {
+    padding: $general-sections-padding;
+}

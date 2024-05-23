@@ -1,0 +1,100 @@
+$flexboxwidth: 90%;
+
+@mixin flex-setup {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+@mixin flex-s-b {
+    @include flex-setup;
+    justify-content: space-between;
+}
+
+.flex-s-b {
+    @include flex-setup;
+    justify-content: space-between;
+}
+
+@mixin flex-s-a {
+    @include flex-setup;
+    justify-content: space-around;
+}
+
+.flex-s-a {
+    @include flex-setup;
+    justify-content: space-around;
+}
+
+@mixin flex-hc {
+    @include flex-setup;
+    justify-content: center;
+}
+
+.flex-hc {
+    @include flex-setup;
+    justify-content: center;
+}
+
+@mixin flex-vc {
+    @include flex-setup;
+    align-items: center;
+}
+
+.flex-vc {
+    @include flex-setup;
+    align-items: center;
+}
+
+@mixin flex-hvc {
+    @include flex-setup;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-hvc {
+    @include flex-setup;
+    justify-content: center;
+    align-items: center;
+}
+
+
+// Here it's really funny because you need to choose the main rule in the number about the boxes, and you'll play with this and auto sizes
+@mixin box-setup {
+    box-sizing: border-box;
+    margin: 5px;
+    transition: all 0.3s;
+}
+
+// Here you'll make your template, it's easy, if you want to work with more than 12 columns so change;
+$boxtemplate: 12;
+$boxcalc: $flexboxwidth / $boxtemplate;
+
+/* Flex-Box Setup for 12 colums */
+@for $i from 1 through $boxtemplate {
+    .box-#{$i} {
+        @include box-setup;
+        width: $boxcalc * $i;
+    }
+}
+// Here it's funny because the rules change with the letter m for medium screens, from 450px to 1000 px max.
+@media (max-width: $break-medium) {
+    /* Flex-Box Setup for 12 colums */
+@for $i from 1 through $boxtemplate {
+    .box-m-#{$i} {
+        @include box-setup;
+        width: $boxcalc * $i;
+    }
+}
+}
+
+// Here it's funny because the rules change with the letter m for medium screens, from 0px to 550 px max.
+@media (max-width: $break-small) {
+    /* Flex-Box Setup for 12 colums */
+@for $i from 1 through $boxtemplate {
+    .box-p-#{$i} {
+        @include box-setup;
+        width: $boxcalc * $i;
+    }
+}
+}

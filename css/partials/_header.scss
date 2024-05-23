@@ -1,0 +1,185 @@
+/* Header */
+//Here you'll setup the header and it'll make something magical in variables file, because you can change if you want fixed or normal
+header {
+    // Do you want fixed? if it's true enable the next lines, also setup in main the top
+    left: $header-top-left;
+    position: $header-position;
+    top: $header-top-left;
+    z-index: $header-index;
+    // Until here
+    //Next codes
+    background: $header-background;
+    box-sizing: border-box;
+    height: $header-height;
+    padding: $header-padding;
+    width: $header-width;
+    border-bottom: 2px black solid;
+
+    /* NavBar */
+    nav {
+        float: $header-nav-float;
+
+        ul {
+            display: $header-nav-ul-display;
+            margin: $header-nav-ul-margin;
+            padding: $header-nav-ul-padding;
+
+            li {
+                list-style: $header-nav-ul-li-list-style;
+                position: $header-nav-ul-li-list-position;
+
+                &.sub-menu:before {
+                    position: absolute;
+                    content: "\f0dd";
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    line-height: 50px;
+                    color: black;
+                    right: 5px;
+                }
+                &.sub-menu:hover:before {
+                    color: white;
+                }
+
+                &.activer2.sub-menu:before {
+                    content: "\f0de";
+                }
+
+                &.activer2 ul {
+                    display: block;
+                }
+
+                ul {
+                    position: absolute;
+                    left: 0;
+                    background: $header-background;
+                    display: none;
+
+                    li {
+                        display: block;
+                        width: 200px;
+                    }
+                }
+            }
+
+            a {
+                color: $header-nav-ul-li-a-color;
+                display: $header-nav-ul-li-a-display;
+                height: $header-nav-ul-li-a-height;
+                line-height: $header-nav-ul-li-a-line-height;
+                padding: $header-nav-ul-li-a-padding;
+                text-decoration: $header-nav-ul-li-a-text-decoration;
+                transition: $header-nav-ul-li-a-transition;
+
+                &:hover,
+                &.active {
+                    background: black;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+/* Logo */
+// It's up to you if you want img, or Text, only change the HTML
+.logo {
+    // If it's img you can enable this line, if it's ignore this background color
+    //background: $maincolor;
+    //color: $color2;
+    float: $header-logo-float;
+    font-size: $header-logo-font-size;
+    font-weight: $header-logo-font-weight;
+    height: $header-logo-height;
+    line-height: $header-logo-line-height;
+    a {
+        color: black;
+        letter-spacing: 10px;
+        display: block;
+        &:hover {
+            color: white;
+            background: black;
+        }
+    }
+
+    img {
+        margin-top: $header-logo-img-margin-top;
+        transition: $header-logo-img-transition;
+        width: $header-logo-img-width;
+
+        // If you want some hover effect so work here, if it's not ignore this lines
+        &:hover {
+            opacity: $header-logo-img-opacity;
+            transform: $header-logo-img-transform;
+        }
+    }
+}
+
+/* Menu Button */
+.menu-toggle {
+    color: $menu-btn-color;
+    float: $menu-btn-float;
+    line-height: $menu-btn-line-height;
+    font-size: $menu-btn-font-size;
+    cursor: $menu-btn-cursor;
+    display: $menu-btn-display;
+    transition: $menu-btn-transition;
+
+    &:hover {
+        color: $menu-btn-hover-color;
+    }
+}
+
+// The Next lines are for Media Responsive Menu so try to don't change, but the colors you're welcome only when are background, or the border bottom line
+@media (max-width: $break-medium) {
+    header {
+        padding: 0 20px 0 0;
+
+        .logo {
+            position: relative;
+            left: 40%;
+        }
+
+        nav {
+            position: absolute;
+            width: 100%;
+            height: calc(100vh - 50px);
+            background: $menu-responsive-background;
+            top: 50px;
+            left: -100%;
+            transition: 0.5s;
+
+            &.activer {
+                left: 0;
+            }
+
+            ul {
+                display: block;
+                text-align: center;
+
+                li {
+                    a {
+                        border-bottom: $menu-responsive-a-border-bottom;
+                    }
+
+                    &.activer2 ul {
+                        position: relative;
+                        background: $header-background;
+
+                    }
+
+                    & ul li {
+                        width: 100%;
+                    }
+
+                }
+            }
+        }
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Media Responsive for Menu */

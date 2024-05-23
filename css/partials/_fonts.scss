@@ -1,0 +1,24 @@
+/* Document Fonts*/
+// The First thing for the project will be to choose the font, we can do it through Google Fonts, or Computer Fonts
+// If you decide work with Google Fonts please insert the import codes in the next line
+@import url('https://fonts.googleapis.com/css?family=Oswald|Titillium+Web');
+
+// Now you need to setup in the next lines
+// Setup all Font
+body {
+    // Here insert the code
+    font-family: 'Titillium Web', sans-serif;
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    // Here insert the code
+    font-family: 'Oswald', sans-serif;
+}
+
+// That's great, you could do it perfectly dude, it's all done
